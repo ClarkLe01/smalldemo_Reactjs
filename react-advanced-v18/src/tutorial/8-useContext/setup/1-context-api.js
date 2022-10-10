@@ -22,24 +22,22 @@ const ContextAPI = () => {
 };
 
 const List = () => {
-  const mainData = useContext(PersonContext);
-  console.log(mainData);
+  const { removePerson, people } = useContext(PersonContext);
+  // console.log(mainData);
   return (
     <>
-      {mainData.people.map((person) => {
-        return <SinglePerson key={person.id} {...person} />;
+      {people.map((person) => {
+        return <SinglePerson key={person.id} {...person} func = {removePerson} />;
       })}
     </>
   );
 };
 
-const SinglePerson = ({ id, name }) => {
-  const { removePerson } = useContext(PersonContext);
-
+const SinglePerson = ({ id, name, func }) => {
   return (
     <div className='item'>
       <h4>{name}</h4>
-      <button onClick={() => removePerson(id)}>remove</button>
+      <button onClick={() => func(id)}>remove</button>
     </div>
   );
 };

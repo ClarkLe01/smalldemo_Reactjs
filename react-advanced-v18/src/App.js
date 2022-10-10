@@ -1,5 +1,5 @@
 import React from 'react';
-import ContextAPI from './tutorial/8-useContext/setup/1-context-api';
+import ContextAPI from './tutorial/8-useContext/final/1-context-api';
 function App() {
   return (
     <div className='container'>
