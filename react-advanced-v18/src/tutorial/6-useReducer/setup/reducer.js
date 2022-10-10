@@ -17,6 +17,7 @@ export const reducer = (state, action) => {
             newPeople = state.people.filter(
                 (person) => person.id !== action.payload
               );
+              console.log({ ...state, people: newPeople })
               return { ...state, people: newPeople };
         default:
             throw new Error('no matching action type');

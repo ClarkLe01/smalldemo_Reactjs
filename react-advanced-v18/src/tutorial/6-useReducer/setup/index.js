@@ -4,13 +4,14 @@ import { data } from '../../../data';
 // reducer function
 import { reducer } from './reducer';
 const defaultState = {
-  people: [],
+  people: [...data],
   isModalOpen: false,
   modalContent: '',
 };
 const Index = () => {
   const [name, setName] = useState('');
   const [state, dispatch] = useReducer(reducer, defaultState);
+  console.log(state.people)
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name) {
@@ -21,9 +22,11 @@ const Index = () => {
       dispatch({ type: 'NO_VALUE' });
     }
   };
+  
   const closeModal = () => {
     dispatch({ type: 'CLOSE_MODAL' });
   };
+  
   return (
     <>
       {state.isModalOpen && (
