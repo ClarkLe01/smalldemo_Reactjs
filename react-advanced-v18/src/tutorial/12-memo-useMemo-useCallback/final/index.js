@@ -7,6 +7,7 @@ const url = 'https://course-api.com/javascript-store-products'
 
 // every time props or state changes, component re-renders
 const calculateMostExpensive = (data) => {
+  console.log("use Memo");
   return (
     data.reduce((total, item) => {
       const price = item.fields.price
@@ -26,9 +27,7 @@ const Index = () => {
     setCart(cart + 1)
   }, [cart])
 
-  const mostExpensive = useMemo(() => calculateMostExpensive(products), [
-    products,
-  ])
+  const mostExpensive = useMemo(() => calculateMostExpensive(products), [products,])
   return (
     <>
       <h1>Count : {count}</h1>

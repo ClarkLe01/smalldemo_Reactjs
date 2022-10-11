@@ -1,10 +1,10 @@
 import React from 'react';
-import Example from './tutorial/9-custom-hooks/final/1-fetch-example';
+import Index from './tutorial/12-memo-useMemo-useCallback/final';
 function App() {
   return (
     <div className='container'>
       <h2>Advanced Tutorial</h2>
-      <Example/>
+      <Index/>
     </div>
   )
 }
