@@ -1,10 +1,10 @@
 import React from 'react';
-import Final from './tutorial/12-memo-useMemo-useCallback/final';
+import Counter from './tutorial/13-useCallBack/Final/Counter';
 function App() {
   return (
     <div className='container'>
       <h2>Advanced Tutorial</h2>
-      <Final/>
+      <Counter/>
     </div>
   )
 }
