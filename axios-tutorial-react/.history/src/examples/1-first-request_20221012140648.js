@@ -7,7 +7,7 @@ const FirstRequest = () => {
   const fetchData = async () =>{
     try {
       const response = await axios.get(url);
-      console.log(response.status)
+      console.log(response.data)
     } catch (error) {
       console.log(error.response)
       

@@ -6,16 +6,13 @@ const url = 'https://course-api.com/react-store-products';
 const FirstRequest = () => {
   const fetchData = async () =>{
     try {
-      const response = await axios.get(url);
-      console.log(response.status)
+      
     } catch (error) {
-      console.log(error.response)
       
     }
   };
   useEffect(() => {
     console.log('first axios request');
-    fetchData();
   }, []);
 
   return <h2 className='text-center'>first request</h2>;

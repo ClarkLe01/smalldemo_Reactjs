@@ -9,11 +9,7 @@ const Headers = () => {
 
   const fetchDadJoke = async () => {
     try {
-      const resp = await axios(url,{
-        headers:{
-          Accept : 'application/json'
-        }
-      });
+      const resp = await axios(url);
       console.log(resp)
     } catch (error) {}
   };

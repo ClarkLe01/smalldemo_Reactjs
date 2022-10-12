@@ -7,8 +7,7 @@ const GlobalInstance = () => {
   const fetchData = async () => {
     try {
       const resp1 = await axios(productsUrl);
-      const resp2 = await axios(randomUserUrl);
-      console.log(resp2)
+      console.log(resp1)
     } catch (error) {
       
     }
