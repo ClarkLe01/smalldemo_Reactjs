@@ -5,7 +5,7 @@ const url = 'https://course-api.com/react-store-products';
 const Interceptors = () => {
   const fetchData = async () => {
     try {
-      const resp = await authFetch('/react-store-productss')
+      const resp = await authFetch('/react-store-products')
     } catch (error) {
       
     }
